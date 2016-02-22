@@ -12,12 +12,15 @@ System.config({
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
   },
+
   packages: {
-      app: {
-          defaultExtension: 'js'
-      }
+    "app": {
+      "defaultExtension": "js"
+    }
   },
+
   map: {
+    "angular": "github:angular/bower-angular@1.5.0",
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "core-js": "npm:core-js@1.2.6",
