@@ -6,6 +6,6 @@ export default class AppController {
     }
 }
 
-angular
-    .module("app")
-    .controller("AppController", AppController);
+// angular
+//     .module("app")
+//     .controller("AppController", AppController);

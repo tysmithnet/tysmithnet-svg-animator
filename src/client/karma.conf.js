@@ -24,12 +24,13 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            
+
         ],
 
 
         // list of files to exclude
         exclude: [
+            "coverage/**/*"
         ],
 
         babelPreprocessor: {
@@ -49,14 +50,32 @@ module.exports = function (config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            "app/**/!(*.spec).js": ['babel']
+            "app/**/!(*.spec).js": ['babel', 'sourcemap', 'coverage']
         },
 
+        coverageReporter: {
+            instrumenters: { isparta: require('isparta') },
+            instrumenter: {
+                'app/**/*.js': 'isparta'
+            },
+
+            reporters: [
+                {
+                    type: 'text-summary',
+                    subdir: normalizationBrowserName
+                },
+                {
+                    type: 'html',
+                    dir: 'coverage/',
+                    subdir: normalizationBrowserName
+                }
+            ]
+        },
 
         // test results reporter to use
         // possible values: 'dots', 'progress'
         // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-        reporters: ['progress'],
+        reporters: ['coverage', 'progress'],
 
 
         // web server port
@@ -88,5 +107,9 @@ module.exports = function (config) {
         // Concurrency level
         // how many browser should be started simultaneous
         concurrency: Infinity
-    })
+    });
+
+    function normalizationBrowserName(browser) {
+        return browser.toLowerCase().split(/[ /-]/)[0];
+    }
 }
