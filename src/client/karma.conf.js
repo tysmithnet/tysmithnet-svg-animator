@@ -24,7 +24,7 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            "../../node_modules/babel-polyfill/dist/polyfill.js"
+            
         ],
 
 
@@ -73,17 +73,17 @@ module.exports = function (config) {
 
 
         // enable / disable watching file and executing tests whenever any file changes
-        autoWatch: false,
+        autoWatch: true,
 
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['Chrome' ,'PhantomJS'],
+        browsers: ['Chrome'],
 
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits
-        singleRun: true,
+        singleRun: false,
 
         // Concurrency level
         // how many browser should be started simultaneous

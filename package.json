@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start src/client/karma.conf.js"
   },
   "keywords": [],
   "author": "",
@@ -23,8 +23,11 @@
     }
   },
   "devDependencies": {
-    "babel-polyfill": "^6.5.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
     "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7",
     "karma-jspm": "^2.0.2"
   }
 }
