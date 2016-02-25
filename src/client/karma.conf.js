@@ -44,7 +44,8 @@ module.exports = function (config) {
 
         proxies: {
             "/app/": "/base/app/",
-            "/jspm_packages/": "/base/jspm_packages/"
+            "/jspm_packages/": "/base/jspm_packages/",
+            "/domain/": "/base/domain/"
         },
 
         // preprocess matching files before serving them to the browser
