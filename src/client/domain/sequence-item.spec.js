@@ -1,3 +1,5 @@
+import SequenceItem from "./sequence-item";
+
 describe("SequenceItem", () => {
     describe("creation", () => {
         it("should require a name", () => {
