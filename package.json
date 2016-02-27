@@ -33,12 +33,16 @@
     "jspm": "^0.16.13",
     "karma": "^0.13.14",
     "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^0.2.2",
     "karma-coverage": "douglasduteil/karma-coverage#next",
+    "karma-html-reporter": "^0.2.7",
     "karma-jasmine": "^0.3.6",
+    "karma-jasmine-html-reporter": "^0.2.0",
+    "karma-jasmine-html-reporter-livereload": "^1.0.0",
     "karma-jspm": "^2.0.2",
     "karma-phantomjs-launcher": "^0.2.0",
-    "phantomjs": "^1.9.17",
-    "karma-sourcemap-loader": "^0.3.7"
+    "karma-sourcemap-loader": "^0.3.7",
+    "phantomjs": "^1.9.17"
   },
   "dependencies": {
     "gulp": "^3.9.1",
