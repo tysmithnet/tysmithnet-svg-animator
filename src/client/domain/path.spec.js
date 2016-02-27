@@ -1,4 +1,4 @@
-import Path from './path';
+import Path from "./path";
 
 describe("path", () => {
     it("should take a name and some data", () => {
