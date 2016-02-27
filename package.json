@@ -14,7 +14,8 @@
       "baseURL": "src/client"
     },
     "dependencies": {
-      "angular": "github:angular/bower-angular@^1.5.0"
+      "angular": "github:angular/bower-angular@^1.5.0",
+      "uuid": "npm:uuid@^2.0.1"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^6.3.17",
