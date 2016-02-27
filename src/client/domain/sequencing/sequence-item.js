@@ -2,7 +2,7 @@ import uuid from "uuid";
 
 /**
  * Represents anything that can be placed in an animation
- * sequence
+ * sequence. This class also serves as a null object pattern.
  */
 export default class SequenceItem {
     /**
