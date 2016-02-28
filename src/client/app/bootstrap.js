@@ -1,9 +1,8 @@
 import angular from "angular";
 import "bootstrap";
 
-import "./app.module";
-import "./app.controller";
-import "./app.directive";
+import "./app.boot";
+import "./navbar/navbar.boot";
 
 angular.element(document).ready(function(){
     angular.bootstrap(document, ['app']);
