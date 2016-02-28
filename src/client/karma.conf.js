@@ -15,10 +15,11 @@ module.exports = function (config) {
         jspm: {
             config: "config.js",
             loadFiles: [
-                "**/*.spec.js"
+                "./domain/**/*.js",
+                "./app/*.js"
             ],
             serveFiles: [
-                "**/!(*.spec).js"
+                "./**/*.js"
             ]
         },
 
