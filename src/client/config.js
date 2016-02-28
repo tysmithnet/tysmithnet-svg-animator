@@ -21,11 +21,15 @@ System.config({
 
   map: {
     "angular": "github:angular/bower-angular@1.5.0",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.5.0",
     "babel": "npm:babel-core@5.8.35",
     "babel-runtime": "npm:babel-runtime@5.8.35",
     "bootstrap": "github:twbs/bootstrap@3.3.6",
     "core-js": "npm:core-js@1.2.6",
     "uuid": "npm:uuid@2.0.1",
+    "github:angular/bower-angular-mocks@1.5.0": {
+      "angular": "github:angular/bower-angular@1.5.0"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
