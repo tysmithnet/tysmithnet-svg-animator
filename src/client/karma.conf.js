@@ -16,7 +16,7 @@ module.exports = function (config) {
             config: "config.js",
             loadFiles: [
                 "./domain/**/*.js",
-                "./app/*.js"
+                "./app/**/*.js"
             ],
             serveFiles: [
                 "./**/*.js"
