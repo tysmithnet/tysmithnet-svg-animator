@@ -5,13 +5,16 @@ describe("Navbar", () => {
     var $controller;
     var $compile;
     var $rootScope;
+    var $templateCache;
     
     beforeEach(() => {
+        module("app");
         module("navbar");
-        inject((_$controller_, _$compile_, _$rootScope_) => {
+        inject((_$controller_, _$compile_, _$rootScope_, _$templateCache_) => {
             $controller = _$controller_;
             $compile = _$compile_;
             $rootScope = _$rootScope_;
+            var template = _$templateCache_.get("app/navbar/navbar.template.html");
         });
     });
 

@@ -43,6 +43,7 @@
     "karma-jasmine-html-reporter": "^0.2.0",
     "karma-jasmine-html-reporter-livereload": "^1.0.0",
     "karma-jspm": "^2.0.2",
+    "karma-ng-html2js-preprocessor": "^0.2.1",
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-sourcemap-loader": "^0.3.7",
     "phantomjs": "^1.9.17"
