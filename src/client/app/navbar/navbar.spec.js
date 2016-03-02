@@ -1,5 +1,6 @@
 import angular from "angular";
 import {module, inject} from "angular-mocks";
+import {templateUrl} from "./navbar.directive";
 
 describe("Navbar", () => {
     var $controller;
@@ -14,8 +15,8 @@ describe("Navbar", () => {
             $controller = _$controller_;
             $compile = _$compile_;
             $rootScope = _$rootScope_;
-            let template = _$templateCache_.get("/app/navbar/navbar.template.html");
-            _$httpBackend_.when("GET", "/app/navbar/navbar.template.html").respond(template);
+            let template = _$templateCache_.get(templateUrl);
+            _$httpBackend_.when("GET", templateUrl).respond(template);
         });
     });
 
