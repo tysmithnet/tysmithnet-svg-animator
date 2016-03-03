@@ -55,7 +55,8 @@ module.exports = function (config) {
             ]
         },
         ngHtml2JsPreprocessor: {
-            moduleName: 'app'
+            moduleName: "templates",
+            prependPrefix: "/"
         },
         reporters: ['coverage', 'progress', 'kjhtml'],
         port: 9876,
