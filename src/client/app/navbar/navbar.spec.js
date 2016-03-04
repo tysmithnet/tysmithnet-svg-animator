@@ -10,7 +10,6 @@ describe("Navbar", () => {
     
     beforeEach(() => {
         module("app");
-        module("templates");
         module("navbar");
         module("ngMockE2E");
         
@@ -53,3 +52,5 @@ describe("Navbar", () => {
         });
     });
 });
+
+window.onload();
