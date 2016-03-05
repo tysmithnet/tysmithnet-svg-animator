@@ -10,10 +10,6 @@ describe("globals service", () => {
         });
     });
     
-    beforeEach(inject((_globals_) => {
-        globals = globals;
-    }));
-    
     it("should have an application title", () => {
         expect(globals.appTitle).toBeDefined();
     });

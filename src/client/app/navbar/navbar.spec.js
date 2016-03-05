@@ -52,5 +52,3 @@ describe("Navbar", () => {
         });
     });
 });
-
-window.onload();
