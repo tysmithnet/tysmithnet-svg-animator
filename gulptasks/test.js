@@ -1,8 +1,15 @@
 var gulp = require('gulp');
-var KarmaServer = require('karma').Server;
+var finalhandler = require("finalhandler");
+var http = require("http");
+var serveStatic = require("serve-static");
 
-gulp.task('test', function(cb){
-    new KarmaServer({
-        configFile: __dirname + "/../src/client/karma.conf.js"
-    }, cb).start(); 
+gulp.task("test", function(){
+    var serve = serveStatic("dist/client");
+    
+    var server = http.createServer(function(req, res){
+       var done = finalhandler(req, res);
+       serve(req, res, done); 
+    });
+    
+    server.listen(8080);
 });
