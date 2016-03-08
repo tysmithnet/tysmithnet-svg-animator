@@ -17,7 +17,7 @@ gulp.task("inject", function (cb) {
             gulp
                 .src(testboot)
                 .pipe(injectString.prepend(imports.join("\n")))
-                .pipe(gulp.dest(testboot))
+                .pipe(gulp.dest("dist/client/test/"))
                 .on("end", cb);
         });
 });
