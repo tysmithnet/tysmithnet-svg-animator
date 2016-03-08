@@ -32,6 +32,7 @@
     "gulp-debug": "^2.1.2",
     "gulp-filenames": "^2.0.0",
     "gulp-inject-string": "^1.1.0",
+    "gulp-newer": "^1.1.0",
     "gulp-util": "^3.0.7",
     "isparta": "^3.0.3",
     "istanbul": "gotwarlost/istanbul.git#source-map",
