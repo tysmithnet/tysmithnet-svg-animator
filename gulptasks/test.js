@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var finalhandler = require("finalhandler");
 var http = require("http");
 var serveStatic = require("serve-static");
+var open = require("gulp-open");
 
 gulp.task("test", function(){
     var serve = serveStatic("dist/client");
@@ -12,4 +13,8 @@ gulp.task("test", function(){
     });
     
     server.listen(8080);
+    
+    gulp
+        .src(__filename)
+        .pipe(open({uri: "http://localhost:8080/test/index.html"}))
 });
