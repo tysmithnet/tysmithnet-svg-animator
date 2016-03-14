@@ -6,18 +6,16 @@ describe("Navbar", () => {
     var $controller;
     var $compile;
     var $rootScope;
-    var $provide;
-    
+
     beforeEach(() => {
         module("app");
         module("navbar");
         module("ngMockE2E");
-        
-        inject((_$controller_, _$compile_, _$rootScope_, _$templateCache_, _$httpBackend_, _$provide_) => {
+
+        inject((_$controller_, _$compile_, _$rootScope_, _$templateCache_, _$httpBackend_) => {
             $controller = _$controller_;
             $compile = _$compile_;
             $rootScope = _$rootScope_;
-            $provide = _$provide_;
             let template = _$templateCache_.get(templateUrl);
             _$httpBackend_.when("GET", templateUrl).respond(template);
         });
