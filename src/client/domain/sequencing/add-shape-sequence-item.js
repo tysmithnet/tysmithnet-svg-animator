@@ -1,3 +1,5 @@
+"use strict";
+
 import Shape from "../shape";
 import SequenceItem from "./sequence-item";
 
@@ -6,11 +8,11 @@ import SequenceItem from "./sequence-item";
  * sequence for animating.
  */
 export default class AddShapeSequenceItem extends SequenceItem {
-    
+
     /**
      * Creates a AddShapeSequenceItem
      * @param {string} name - user friendly name for this item
-     * @param {Shape} shape - the shape to be added 
+     * @param {Shape} shape - the shape to be added
      */
     constructor(name, shape) {
         super(name)

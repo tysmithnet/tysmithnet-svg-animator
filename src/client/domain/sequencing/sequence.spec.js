@@ -1,3 +1,5 @@
+"use strict";
+
 import Sequence from "./sequence";
 import SequenceItem from "./sequence-item";
 
@@ -8,7 +10,7 @@ describe("Sequence", () => {
             expect(seq.name).toEqual("sample");
         });
     });
-    
+
     describe("modifying", () => {
         it("should accept items to place in the timeline", () => {
             let seq = new Sequence("sample");

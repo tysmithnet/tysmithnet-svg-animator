@@ -1,3 +1,5 @@
+"use strict";
+
 import angular from "angular";
 import NavbarController from "./navbar.controller";
 
@@ -9,7 +11,7 @@ export default class NavbarDirective {
         this.controllerAs = "navbar";
         this.bindToController = true;
     }
-    
+
     static factoryFunction(){
         return new NavbarDirective();
     }

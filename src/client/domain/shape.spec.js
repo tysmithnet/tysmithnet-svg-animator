@@ -1,3 +1,5 @@
+"use strict";
+
 import Shape from "./shape";
 
 describe("Shape", () => {

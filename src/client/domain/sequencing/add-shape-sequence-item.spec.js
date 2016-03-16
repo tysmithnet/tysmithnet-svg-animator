@@ -1,3 +1,5 @@
+"use strict";
+
 import Shape from "../shape";
 import AddShapeSequenceItem from "./add-shape-sequence-item";
 

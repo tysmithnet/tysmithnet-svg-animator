@@ -1,3 +1,5 @@
+"use strict";
+
 import angular from "angular";
 import {module, inject} from "angular-mocks";
 import {templateUrl} from "./navbar.directive";

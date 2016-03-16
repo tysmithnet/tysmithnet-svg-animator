@@ -1,3 +1,5 @@
+"use strict";
+
 import SequenceItem from "./sequence-item";
 
 export default class MorphToSequenceItem extends SequenceItem {
