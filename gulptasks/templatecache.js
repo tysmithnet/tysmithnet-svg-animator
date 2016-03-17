@@ -17,7 +17,7 @@ gulp.task("templatecache", function(cb){
         try {
           angular.module("templates");
         }
-        catch(){
+        catch(err){
           angular.module("templates", []);
         }
         angular
