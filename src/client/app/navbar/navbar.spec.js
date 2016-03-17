@@ -35,10 +35,9 @@ describe("Navbar", () => {
 
         function getCompiledElement() {
             let html = "<ts-navbar></ts-navbar>";
-            let element = angular.element(html);
-            let scope = $rootScope;
+            let scope = $rootScope.$new();
             scope.navbar = $controller("NavbarController", { globals: { appTitle: "hi" } });
-            let compiled = $compile(element)(scope);
+            let compiled = $compile(html)(scope);
             scope.$digest();
             return compiled;
         }
@@ -46,9 +45,18 @@ describe("Navbar", () => {
         beforeEach(() => {
             compiledElement = getCompiledElement();
         });
+        
+        afterEach(() => {
+            compiledElement.remove();
+        })
+
+        it("should render some html", () => {
+            expect(compiledElement.html()).toMatch(/.+/);
+        });
 
         it("should display the app title", () => {
-            expect(compiledElement.find(".navbar-brand").text()).toEqual("hi");;
+            let navbar = compiledElement.find(".navbar-brand");
+            expect(navbar.text()).toEqual("hi");;
         });
     });
 });

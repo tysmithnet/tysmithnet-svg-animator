@@ -12,8 +12,9 @@ var path = require("path");
  */
 gulp.task("templatecache", function(cb){
     var createTemplate = function(vinyl, encoding, callback){
-        var url = path.normalize("/" + vinyl.path.replace(vinyl.cwd, ""));
-        var contents = `
+        let prefix = path.join(vinyl.cwd, "src/client");
+        let url = path.normalize("/" + vinyl.path.replace(prefix, ""));
+        let contents = `
         try {
           angular.module("templates");
         }
@@ -22,7 +23,7 @@ gulp.task("templatecache", function(cb){
         }
         angular
           .module("templates")
-          .run(function($templateCache){
+          .config(function($templateCache){
             $templateCache.put("${url}", \`${vinyl.contents.toString()}\`);
           });
         `;
