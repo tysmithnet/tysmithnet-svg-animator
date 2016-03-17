@@ -1,9 +1,14 @@
+"use strict";
+
 var gulp = require('gulp');
 var finalhandler = require("finalhandler");
 var http = require("http");
 var serveStatic = require("serve-static");
 var open = require("gulp-open");
 
+/**
+ * Open a browser and load the test files
+ */
 gulp.task("test", function(){
     var serve = serveStatic("dist/client");
     

@@ -1,3 +1,5 @@
+"use strict";
+
 var gulp = require("gulp");
 var through = require("through2");
 var Vinyl = require("vinyl");
@@ -5,6 +7,9 @@ var util = require("gulp-util");
 var debug = require("gulp-debug");
 var path = require("path");
 
+/**
+ * Create javascript versions of the angular templates
+ */
 gulp.task("templatecache", function(cb){
     var createTemplate = function(vinyl, encoding, callback){
         var url = path.normalize("/" + vinyl.path.replace(vinyl.cwd, ""));
