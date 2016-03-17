@@ -15,7 +15,7 @@ const testDir = path.resolve("./dist/client/test");
 function getVinyls() {
     return new Promise((res, rej) => {
         gulp
-            .src("dist/client/**/*.spec.js")
+            .src(["dist/client/**/*.{spec,html}.js", "!dist/client/jspm_packages/**/*"])
             .pipe(concatStream({
                 encoding: "object"
             }, (vinyls) => {
@@ -41,7 +41,9 @@ gulp.task("inject", () => {
         vinylsPromise.then((vinyls) => {
             let text = vinyls.map((e) => {
                 return 'import "' + getImportPath(e) + '";';
-            }).join("\n");
+            });
+            text.sort();
+            text = text.join("\n");
             gulp
                 .src(testboot)
                 .pipe(injectString.prepend(text))
