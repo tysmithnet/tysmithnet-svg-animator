@@ -1,40 +1,23 @@
 "use strict";
 
 var gulp = require("gulp");
-var through = require("through2");
-var Vinyl = require("vinyl");
-var util = require("gulp-util");
-var debug = require("gulp-debug");
 var path = require("path");
+var templateCache = require("gulp-angular-templatecache")
 
 /**
  * Create javascript versions of the angular templates
  */
 gulp.task("templatecache", function(cb){
-    var createTemplate = function(vinyl, encoding, callback){
-        let prefix = path.join(vinyl.cwd, "src/client");
-        let url = path.normalize("/" + vinyl.path.replace(prefix, ""));
-        let contents = `
-        try {
-          angular.module("templates");
+    const projectDir = path.resolve(__dirname + "/../");
+    let options = {
+        module: "app",
+        transformUrl: function(url){
+            url = url.replace(path.join(projectDir, "client"), "");
+            return url;
         }
-        catch(err){
-          angular.module("templates", []);
-        }
-        angular
-          .module("templates")
-          .config(function($templateCache){
-            $templateCache.put("${url}", \`${vinyl.contents.toString()}\`);
-          });
-        `;
-        vinyl.contents = new Buffer(contents);
-        vinyl.path = vinyl.path + ".js";
-        this.push(vinyl);
-        callback();
-    };
-
+    }
     return gulp
       .src("src/client/**/*.template.html", {base: "src"})
-      .pipe(through.obj(createTemplate))
-      .pipe(gulp.dest("dist/"))
+      .pipe(templateCache(options))
+      .pipe(gulp.dest("dist/client/test/"))
 });

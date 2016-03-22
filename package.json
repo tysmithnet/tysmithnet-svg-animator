@@ -32,6 +32,7 @@
     "concat-stream": "^1.5.1",
     "del": "^2.2.0",
     "finalhandler": "^0.4.1",
+    "gulp-angular-templatecache": "^1.8.0",
     "gulp-debug": "^2.1.2",
     "gulp-filenames": "^2.0.0",
     "gulp-inject-string": "^1.1.0",
