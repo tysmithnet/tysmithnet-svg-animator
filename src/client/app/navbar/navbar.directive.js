@@ -7,7 +7,7 @@ export default class NavbarDirective {
     constructor(){
         this.restrict = "E";
         this.templateUrl = templateUrl;
-        this.controller = NavbarController;
+        this.controller = "NavbarController";
         this.controllerAs = "navbar";
         this.bindToController = true;
     }

@@ -1,5 +1,5 @@
 "use strict";
-
+import angular from "angular";
 import {module, inject} from "angular-mocks";
 import {templateUrl} from "./navbar.directive";
 
@@ -8,7 +8,9 @@ describe("Navbar", () => {
         var compiledElement;
         var $rootScope;
         var $compile;
-
+        var $controllerProvider;
+        var $controller;
+        
         beforeEach(module("navbar", function ($controllerProvider) {
             $controllerProvider.register("NavbarController", function () {
                 this.appTitle = "hi";
@@ -18,9 +20,11 @@ describe("Navbar", () => {
         beforeEach(() => {
             module("app");
             module("ngMockE2E");
-            inject((_$rootScope_, _$compile_) => {
+            module("navbar");
+            inject((_$rootScope_, _$compile_, _$controller_) => {
                 $rootScope = _$rootScope_;
                 $compile = _$compile_;
+                $controller = _$controller_;
             });
         });
 
@@ -40,6 +44,11 @@ describe("Navbar", () => {
 
         it("should render some html", () => {
             expect(compiledElement).toMatch(/.+/);
+        });
+        
+        it("should have hi as the application name", () => {
+            var navbar = compiledElement.find(".navbar-brand");
+            expect(navbar.text()).toEqual("hi");
         });
     });
 });
