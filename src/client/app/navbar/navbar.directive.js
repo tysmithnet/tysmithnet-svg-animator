@@ -1,7 +1,6 @@
 "use strict";
 
 import angular from "angular";
-import NavbarController from "./navbar.controller";
 
 export default class NavbarDirective {
     constructor(){
