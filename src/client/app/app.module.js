@@ -2,5 +2,6 @@ import angular from "angular";
 
 angular
     .module("app", [
-        "navbar"
+        "navbar",
+        "viewer"
     ]);
