@@ -3,3 +3,4 @@ import "bootstrap";
 
 import "./app.boot";
 import "./navbar/navbar.boot";
+import "./viewer/viewer.boot";
