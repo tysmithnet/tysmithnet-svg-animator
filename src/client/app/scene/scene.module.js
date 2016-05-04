@@ -7,4 +7,4 @@ import angular from "angular";
  * Will contain services related to scene management
  */
 angular
-    .module("scene", []);
+    .module("scene", ["ui.bootstrap"]);
