@@ -2,6 +2,9 @@
 
 import angular from "angular";
 
+/**
+ * Directive for Navbar component
+ */
 export default class NavbarDirective {
     constructor(){
         this.restrict = "E";
