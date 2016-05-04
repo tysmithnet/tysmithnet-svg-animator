@@ -9,6 +9,9 @@ export default class ViewerDirective {
         this.controller = "ViewerController";
         this.controllerAs = "viewer";
         this.bindToController = true;
+        this.scope = {
+            scene: "="
+        }
     }
     
     static factoryFunction(){
