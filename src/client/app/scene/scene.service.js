@@ -9,9 +9,14 @@ export default class SceneService {
     }
     
     showNewSceneDialog(){
-        this.$uibModal.open({
-            templateUrl: newSceneTemplateUrl 
+        let modal = this.$uibModal.open({
+            size: "lg",
+            templateUrl: newSceneTemplateUrl,
+            controller: "NewSceneModalController",
+            controllerAs: "newSceneModalController",
+            bindToController: true
         });
+        return modal.result;
     }
 }
 
