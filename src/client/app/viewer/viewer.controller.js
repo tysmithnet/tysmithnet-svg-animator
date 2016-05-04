@@ -2,6 +2,9 @@
 
 import angular from "angular";
 
+/**
+ * Backing controller for the Viewer component
+ */
 export default class ViewerController {
     
 }

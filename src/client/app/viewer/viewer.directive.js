@@ -2,6 +2,9 @@
 
 import angular from "angular";
 
+/**
+ * Directive definition for the Viewer component
+ */
 export default class ViewerDirective {
     constructor(){
         this.restrict = "E";

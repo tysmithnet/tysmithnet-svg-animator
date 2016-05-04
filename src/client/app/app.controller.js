@@ -2,9 +2,16 @@
 
 import angular from "angular";
 
+/**
+ * Backing controller for the App component
+ */
 export default class AppController {
     constructor(){
-        this.data = "helloooo";
+        
+        /**
+         * The scene currently being constructed
+         */
+        this.scene = null;
     }
 }
 
