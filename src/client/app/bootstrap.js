@@ -1,5 +1,6 @@
 import angular from "angular";
 import "bootstrap";
+import angularBootstrap from "angular-bootstrap";
 
 // todo: these should be injected
 import "./app.boot";
