@@ -3,6 +3,9 @@ import angular from "angular";
 export default class AppDirective {
     constructor(){
         this.restrict = "E";
+        this.controller = "AppController";
+        this.bindToController = true;
+        this.controllerAs = "app";
         this.templateUrl = templateUrl;
     }
     
