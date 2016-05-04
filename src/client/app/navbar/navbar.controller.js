@@ -21,7 +21,10 @@ export default class NavbarController {
      * Called when "New Scene" is clicked
      */
     onNewSceneClick(){
-        this.SceneService.showNewSceneDialog();
+        let promise = this.SceneService.showNewSceneDialog();
+        promise.then((newScene) => {
+           this.SceneService.setScene(newScene); 
+        });
     }
 }
 

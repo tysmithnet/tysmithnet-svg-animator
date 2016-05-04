@@ -21,7 +21,7 @@ export default class NewSceneModalController {
      * Called when Cancel is clicked on the modal
      */
     cancel(){
-        
+        ;
     }
 }
 
