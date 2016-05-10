@@ -25,6 +25,9 @@ System.config({
   },
 
   map: {
+    "app": "app",
+    "domain": "domain",
+    // vendor
     "angular": "github:angular/bower-angular@1.5.0",
     "angular-bootstrap": "github:angular-ui/bootstrap-bower@1.3.2",
     "angular-mocks": "github:angular/bower-angular-mocks@1.5.0",
