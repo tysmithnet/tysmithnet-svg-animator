@@ -2,35 +2,67 @@
     <h3 class="modal-title">New Scene</h3>
 </div>
 <div class="modal-body">
-    <form class="form-horizontal">
+    <form class="form-horizontal" name="newSceneModalController.formController">
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">Name:</label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" placeholder="Name">
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    placeholder="name" 
+                    ng-model="newSceneModalController.name">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Canvas Size:</label>
             <div class="col-sm-2">
-                <input type="number" class="form-control" placeholder="width">
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    placeholder="width" 
+                    ng-model="newSceneModalController.canvas.width"
+                    min=0>
             </div>
             <div class="col-sm-2">
-                <input type="number" class="form-control" placeholder="height">
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    placeholder="height" 
+                    ng-model="newSceneModalController.canvas.height"
+                    min=0>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Viewbox:</label>
             <div class="col-sm-2">
-                <input type="number" class="form-control" placeholder="x">
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    placeholder="x" 
+                    ng-model="newSceneModalController.viewbox.x">
             </div>
             <div class="col-sm-2">
-                <input type="number" class="form-control" placeholder="y">
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    placeholder="y" 
+                    ng-model="newSceneModalController.viewbox.y">
             </div>
             <div class="col-sm-2">
-                <input type="number" class="form-control" placeholder="width">
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    placeholder="width" 
+                    ng-model="newSceneModalController.viewbox.width"
+                    min=0>
             </div>
             <div class="col-sm-2">
-                <input type="number" class="form-control" placeholder="height">
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    placeholder="height" 
+                    ng-model="newSceneModalController.viewbox.height"
+                    min=0>
             </div>
         </div>
     </form>
