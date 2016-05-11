@@ -1,6 +1,6 @@
 export default class SceneDisplay{
-    constructor(dimensions, viewbox){
-        this.dimensions = dimensions;
+    constructor(canvasDimensions, viewbox){
+        this.canvasDimensions = canvasDimensions;
         this.viewbox = viewbox;
     }
 }
