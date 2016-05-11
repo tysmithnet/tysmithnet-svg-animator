@@ -7,3 +7,4 @@ import "./app.boot";
 import "./navbar/navbar.boot";
 import "./viewer/viewer.boot";
 import "./scene/scene.boot";
+import "./sequencing/sequencing.boot.js";

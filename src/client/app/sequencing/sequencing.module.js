@@ -9,4 +9,6 @@ import angular from "angular";
  * the application.
  */
 angular
-    .module("sequencing", []);
+    .module("sequencing", [
+        "sequence-viewer"
+    ]);

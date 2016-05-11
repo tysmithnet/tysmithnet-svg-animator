@@ -4,5 +4,6 @@ angular
     .module("app", [
         "navbar",
         "viewer",
-        "scene"
+        "scene",
+        "sequencing"
     ]);
