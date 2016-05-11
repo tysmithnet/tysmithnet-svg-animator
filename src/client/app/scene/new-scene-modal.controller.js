@@ -13,6 +13,7 @@ export default class NewSceneModalController {
     constructor($uibModalInstance, $scope){
         this.$uibModalInstance = $uibModalInstance;
         this.$scope = $scope;
+        this.formController = null;
         this.name = null;
         this.canvas = {
             width: null,
@@ -28,9 +29,16 @@ export default class NewSceneModalController {
         this.setupWatchers(); 
     }
     
+    /**
+     * Creates watchers on certain fields to enable form prefilling
+     */
     setupWatchers(){
-        this.$scope.$watch("newSceneModalController.canvas", (oldValue, newValue) => {
-           
+        let that = this;
+        this.$scope.$watch("newSceneModalController.canvas", (newValue, oldValue) => {
+            if(!that.formController.viewboxWidth.$dirty)
+                that.viewbox.width = newValue.width;
+            if(!that.formController.viewboxHeight.$dirty)
+                that.viewbox.height = newValue.height;
         }, true);
     }
     
@@ -38,6 +46,10 @@ export default class NewSceneModalController {
      * Called when OK is clicked on the modal
      */
     ok(){
+        if(!this.formController.$valid){
+            this.formController.okPressed = true;
+            return;
+        }
         let dimensions = new Dimensions(this.canvas.width, this.canvas.height);
         let scene = new Scene();
         this.$uibModalInstance.close("hi");

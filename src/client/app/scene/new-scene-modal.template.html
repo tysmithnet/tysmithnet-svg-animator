@@ -5,62 +5,91 @@
     <form class="form-horizontal" name="newSceneModalController.formController">
         <div class="form-group">
             <label for="inputPassword3" class="col-sm-2 control-label">Name:</label>
-            <div class="col-sm-4">
-                <input 
+            <div    class="col-sm-4" 
+                    ng-class="{'has-error': newSceneModalController.formController.okPressed 
+                        && !newSceneModalController.formController.name.$valid}">
+                <input
+                    name="name" 
                     type="text" 
-                    class="form-control" 
+                    class="form-control"
                     placeholder="name" 
+                    ng-required="true"
                     ng-model="newSceneModalController.name">
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Canvas Size:</label>
-            <div class="col-sm-2">
-                <input 
+            <div class="col-sm-2"
+             ng-class="{'has-error': newSceneModalController.formController.okPressed 
+                        && !newSceneModalController.formController.canvasWidth.$valid}">
+                <input
+                    name="canvasWidth" 
                     type="number" 
-                    class="form-control" 
-                    placeholder="width" 
+                    class="form-control"
+                    placeholder="width"
+                    ng-required="true"
                     ng-model="newSceneModalController.canvas.width"
+                    ng-required="true"
                     min=0>
             </div>
-            <div class="col-sm-2">
-                <input 
+            <div class="col-sm-2"
+             ng-class="{'has-error': newSceneModalController.formController.okPressed 
+                        && !newSceneModalController.formController.canvasHeight.$valid}">
+                <input
+                    name="canvasHeight" 
                     type="number" 
-                    class="form-control" 
-                    placeholder="height" 
+                    class="form-control"
+                    placeholder="height"
+                    ng-required="true"
                     ng-model="newSceneModalController.canvas.height"
                     min=0>
             </div>
         </div>
         <div class="form-group">
             <label class="col-sm-2 control-label">Viewbox:</label>
-            <div class="col-sm-2">
-                <input 
+            <div class="col-sm-2"
+             ng-class="{'has-error': newSceneModalController.formController.okPressed 
+                        && !newSceneModalController.formController.viewboxX.$valid}">
+                <input
+                    name="viewboxX"
                     type="number" 
                     class="form-control" 
-                    placeholder="x" 
+                    placeholder="x"
+                    ng-required="true" 
                     ng-model="newSceneModalController.viewbox.x">
             </div>
-            <div class="col-sm-2">
-                <input 
+            <div class="col-sm-2"
+             ng-class="{'has-error': newSceneModalController.formController.okPressed 
+                        && !newSceneModalController.formController.viewboxY.$valid}">
+                <input
+                    name="viewboxY" 
                     type="number" 
                     class="form-control" 
                     placeholder="y" 
+                    ng-required="true"
                     ng-model="newSceneModalController.viewbox.y">
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-2"
+             ng-class="{'has-error': newSceneModalController.formController.okPressed 
+                        && !newSceneModalController.formController.viewboxWidth.$valid}">
                 <input 
+                    name="viewboxWidth"
                     type="number" 
                     class="form-control" 
                     placeholder="width" 
+                    ng-required="true"
                     ng-model="newSceneModalController.viewbox.width"
                     min=0>
             </div>
-            <div class="col-sm-2">
-                <input 
+            <div class="col-sm-2"
+             ng-class="{'has-error': newSceneModalController.formController.okPressed 
+                        && !newSceneModalController.formController.viewboxHeight.$valid}">
+                <input
+                    name="viewboxHeight" 
                     type="number" 
                     class="form-control" 
                     placeholder="height" 
+                    ng-required="true"
                     ng-model="newSceneModalController.viewbox.height"
                     min=0>
             </div>
