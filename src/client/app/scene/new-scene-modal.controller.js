@@ -50,9 +50,8 @@ export default class NewSceneModalController {
             this.formController.okPressed = true;
             return;
         }
-        let dimensions = new Dimensions(this.canvas.width, this.canvas.height);
-        let scene = new Scene();
-        this.$uibModalInstance.close("hi");
+        let scene = this.createNewSceneFromForm();
+        this.$uibModalInstance.close(scene);
     }
     
     /**
@@ -60,6 +59,17 @@ export default class NewSceneModalController {
      */
     cancel(){
         this.$uibModalInstance.dismiss("cancelled");
+    }
+    
+    /**
+     * Returns a scene object created from the values in the form
+     */
+    createNewSceneFromForm(){
+        let dimensions = new Dimensions(this.canvas.width, this.canvas.height);
+        let viewbox = new ViewBox(this.viewbox.x, this.viewbox.y, 
+            new Dimensions(this.viewbox.width, this.viewbox.height));
+        let display = new SceneDisplay(dimensions, viewbox)
+        return new Scene(this.name, display);
     }
 }
 
